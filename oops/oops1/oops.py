@@ -18,7 +18,6 @@ class car(vehicle):
         return [self.name_of_vehicle, self.capacity]
 v1 = vehicle("truck ", 79, 2)
 c1 = car("truck ", 79, 2)
-
 print(c1.seating_capacity(4))
 #Q3 
 """When a class is derived from more than one base class it is called multiple Inheritance. """
@@ -34,3 +33,24 @@ class child(grandfather,grandmother):
 c1 = child()
 c1.deceasie()
 c1.decies()
+
+class bank:
+    def __init__(self,enrollment_no):
+        self.__enrollment_no = enrollment_no
+    def getter(self):
+        return self.__enrollment_no
+    def setter(self,enrollment_no):
+        self.__enrollment_no = enrollment_no
+b = bank("012464cd201015")
+print(b.getter())
+b.setter("0124vfd30176")
+print(b.getter())
+
+class lst(list):
+    def pop(self):
+        return super().pop() # overriding the method by using super()
+l = lst()
+l.append(0)
+print(l.pop())
+    
+
